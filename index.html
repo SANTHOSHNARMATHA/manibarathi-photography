@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManiBarathi Photography — Wedding & Cinematic Films</title>
+  <meta name="description" content="ManiBarathi Photography — luxury wedding photography, cinematic wedding films, pre-wedding, mehendi, maternity and drone shoots. Capturing moments, creating memories forever.">
+  <meta name="keywords" content="wedding photography, cinematic wedding film, pre-wedding shoot, mehendi photography, drone photography, ManiBarathi Photography">
+  <meta name="author" content="ManiBarathi Photography">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ManiBarathi Photography">
+  <meta property="og:description" content="Capturing Moments, Creating Memories Forever.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/cinematic-arch.jpg">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Fonts: Fraunces (display) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Site styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ManiBarathi Photography",
+    "image": "assets/images/logo.png",
+    "description": "Luxury wedding photography and cinematic films.",
+    "priceRange": "₹₹₹",
+    "telephone": "+91 87540 45410",
+    "sameAs": [ "https://www.instagram.com/mani_bharathi_photography" ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ LOADER (camera aperture) ============ -->
+  <div id="loader" aria-hidden="true">
+    <div class="aperture">
+      <span class="blade"></span><span class="blade"></span><span class="blade"></span>
+      <span class="blade"></span><span class="blade"></span><span class="blade"></span>
+      <img class="loader-logo" src="assets/images/logo.png" onerror="this.style.display='none'" alt="">
+    </div>
+    <div class="loader-brand">Mani<b>Barathi</b> <span>Photography</span></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-x" id="navbar">
+    <div class="container-x nav-inner">
+      <a href="#home" class="brand" aria-label="ManiBarathi Photography home">
+        <span class="brand-logo">
+          <img src="assets/images/logo.png" onerror="this.onerror=null;this.src='assets/images/logo.jpg'" alt="ManiBarathi Photography logo">
+        </span>
+        <span class="brand-txt">
+          <span class="brand-name">Mani<b>Barathi</b></span>
+          <span class="brand-sub">Photography</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch light or dark theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="#booking" class="btn-x d-none d-lg-inline-flex" style="padding:11px 22px"><span>Book Now</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <button class="close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#packages">Packages</a>
+    <a href="#team">Team</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking" class="btn-x mt-3"><span>Book Now</span></a>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-splitline"></div>
+    <div class="container-x">
+      <div class="hero-inner">
+        <span class="eyebrow" data-aos="fade-up">Wedding &amp; Cinematic Films</span>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="80">
+          Every love story<br>deserves a <em>frame</em>
+        </h1>
+        <p class="hero-tag" data-aos="fade-up" data-aos-delay="160">
+          Capturing moments, creating memories forever — luxury wedding photography and films across South India.
+        </p>
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="240">
+          <a href="#booking" class="btn-x"><span>Book Your Date</span> <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portfolio" class="btn-x btn-ghost"><span>View Portfolio</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container-x about-grid">
+      <div class="about-media" data-aos="fade-right">
+        <img src="assets/images/bride-makeup.jpg" alt="Bride during bridal makeup, captured by ManiBarathi Photography">
+        <span class="frame"></span>
+        <div class="about-badge"><b>10+</b><span>Years Behind the Lens</span></div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="eyebrow">The Studio</span>
+        <h2 class="section-title">We don't just take photos — we keep <em>time</em></h2>
+        <p class="lead">
+          ManiBarathi Photography is a boutique wedding studio built on one belief: the small,
+          unrepeatable moments matter most. The nervous laugh before the vows, the mehendi drying
+          on a bride's hands, the quiet look across a temple courtyard.
+        </p>
+        <ul class="about-points">
+          <li><i class="fa-solid fa-check"></i> Candid &amp; traditional coverage under one roof</li>
+          <li><i class="fa-solid fa-check"></i> Cinematic 4K wedding films with drone aerials</li>
+          <li><i class="fa-solid fa-check"></i> Handcrafted albums, delivered on time, every time</li>
+        </ul>
+        <p class="sign">— Mani Barathi, Lead Photographer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section bg-alt" id="services">
+    <span class="split-line"></span>
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Services for every <em>celebration</em></h2>
+        <p class="lead">From the first proposal to the last dance — full coverage, one trusted team.</p>
+      </div>
+      <div class="svc-grid" id="svcGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section class="section" id="portfolio">
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Selected Work</span>
+        <h2 class="section-title">Portfolio <em>gallery</em></h2>
+      </div>
+      <div class="filter-bar" id="filterBar" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wedding">Weddings</button>
+        <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
+        <button class="filter-btn" data-filter="baby">Baby &amp; Kids</button>
+        <button class="filter-btn" data-filter="mehendi">Mehendi</button>
+        <button class="filter-btn" data-filter="portrait">Portraits</button>
+        <button class="filter-btn" data-filter="cinematic">Cinematic</button>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ALBUMS ============ -->
+  <section class="section bg-alt" id="albums">
+    <div class="container-x">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">Real Weddings</span>
+        <h2 class="section-title">Featured wedding <em>albums</em></h2>
+      </div>
+      <div class="album-grid">
+        <div class="album big" data-aos="zoom-in">
+          <img src="assets/images/wedding-ceremony.jpeg" alt="Traditional South Indian wedding ceremony album">
+          <div class="meta"><div class="k">Traditional • Chennai</div><div class="t">The Sacred Vows</div></div>
+        </div>
+        <div class="album" data-aos="zoom-in" data-aos-delay="60">
+          <img src="assets/images/bride-pearls.jpeg" alt="Bridal portrait album">
+          <div class="meta"><div class="k">Bridal Portraits</div><div class="t">Pearls &amp; Silk</div></div>
+        </div>
+        <div class="album" data-aos="zoom-in" data-aos-delay="120">
+          <img src="assets/images/baby-pool.jpeg" alt="Baby splash photoshoot album">
+          <div class="meta"><div class="k">Baby Story</div><div class="t">Splash &amp; Smiles</div></div>
+        </div>
+        <div class="album wide" data-aos="zoom-in" data-aos-delay="60">
+          <img src="assets/images/prewedding-stream.jpeg" alt="Pre-wedding forest stream shoot album">
+          <div class="meta"><div class="k">Pre-Wedding • Outdoor</div><div class="t">By the Stream</div></div>
+        </div>
+        <div class="album" data-aos="zoom-in" data-aos-delay="120">
+          <img src="assets/images/prewedding-forest.jpeg" alt="Pre-wedding couple forest album">
+          <div class="meta"><div class="k">Pre-Wedding</div><div class="t">The Fallen Log</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEFORE / AFTER ============ -->
+  <section class="section" id="before-after">
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Our Craft</span>
+        <h2 class="section-title">The colour-grade <em>difference</em></h2>
+        <p class="lead">Drag the handle to see how we grade every frame in post-production.</p>
+      </div>
+      <div class="ba-wrap" data-aos="fade-up">
+        <div class="ba" id="ba">
+          <img class="before" src="assets/images/bride-portrait.jpg" alt="Before colour grading">
+          <img class="after"  src="assets/images/bride-portrait.jpg" alt="After colour grading">
+          <span class="tag l">Before</span>
+          <span class="tag r">After</span>
+          <div class="divider" id="baDivider"></div>
+          <div class="handle" id="baHandle"><i class="fa-solid fa-left-right"></i></div>
+          <input type="range" id="baRange" min="0" max="100" value="50" aria-label="Compare before and after">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PACKAGES ============ -->
+  <section class="section bg-alt" id="packages">
+    <span class="split-line"></span>
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Investment</span>
+        <h2 class="section-title">Packages &amp; <em>pricing</em></h2>
+        <p class="lead">Transparent pricing. Every package is customisable — just ask.</p>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg" data-aos="fade-up">
+          <div class="name">Silver</div>
+          <div class="price">₹45k <small>/ event</small></div>
+          <p class="desc">Perfect for intimate ceremonies and single-day events.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 1 photographer, full day</li>
+            <li><i class="fa-solid fa-check"></i> 300+ edited photos</li>
+            <li><i class="fa-solid fa-check"></i> Online gallery delivery</li>
+            <li><i class="fa-solid fa-check"></i> 1 printed 20-page album</li>
+            <li class="off"><i class="fa-solid fa-xmark"></i> Cinematic film</li>
+            <li class="off"><i class="fa-solid fa-xmark"></i> Drone coverage</li>
+          </ul>
+          <a href="#booking" class="btn-x btn-ghost" data-package="Silver"><span>Choose Silver</span></a>
+        </div>
+        <div class="pkg featured" data-aos="fade-up" data-aos-delay="80">
+          <span class="ribbon">Most Booked</span>
+          <div class="name">Gold</div>
+          <div class="price">₹95k <small>/ wedding</small></div>
+          <p class="desc">Our signature full wedding coverage with cinematic film.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 2 photographers + 1 cinematographer</li>
+            <li><i class="fa-solid fa-check"></i> 700+ edited photos</li>
+            <li><i class="fa-solid fa-check"></i> 3–5 min cinematic highlight film</li>
+            <li><i class="fa-solid fa-check"></i> 2 premium albums + parents' copies</li>
+            <li><i class="fa-solid fa-check"></i> Drone aerial coverage</li>
+            <li><i class="fa-solid fa-check"></i> Same-day teaser reel</li>
+          </ul>
+          <a href="#booking" class="btn-x" data-package="Gold"><span>Choose Gold</span></a>
+        </div>
+        <div class="pkg" data-aos="fade-up" data-aos-delay="160">
+          <div class="name">Platinum</div>
+          <div class="price">₹1.6L <small>/ multi-day</small></div>
+          <p class="desc">The complete story — engagement to reception, every event.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Full team, all events covered</li>
+            <li><i class="fa-solid fa-check"></i> 1200+ edited photos</li>
+            <li><i class="fa-solid fa-check"></i> Full cinematic film + trailer</li>
+            <li><i class="fa-solid fa-check"></i> Pre-wedding shoot included</li>
+            <li><i class="fa-solid fa-check"></i> Luxury leather box albums</li>
+            <li><i class="fa-solid fa-check"></i> Drone + gimbal + LED setup</li>
+          </ul>
+          <a href="#booking" class="btn-x btn-ghost" data-package="Platinum"><span>Choose Platinum</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS / COUNTERS ============ -->
+  <section class="section" id="achievements">
+    <div class="container-x">
+      <div class="counter-row">
+        <div class="counter" data-aos="fade-up"><div class="num" data-count="520">0</div><div class="lbl">Weddings Shot</div></div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="60"><div class="num" data-count="180">0</div><div class="lbl">Cinematic Films</div></div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="120"><div class="num" data-count="10">0</div><div class="lbl">Years Experience</div></div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="180"><div class="num" data-count="98">0</div><div class="lbl">% Happy Couples</div></div>
+      </div>
+      <div class="section-head center" style="margin:70px auto 0" data-aos="fade-up">
+        <span class="eyebrow">Recognition</span>
+        <h2 class="section-title">Awards &amp; <em>features</em></h2>
+      </div>
+      <div class="award-row">
+        <div class="award" data-aos="zoom-in"><i class="fa-solid fa-award"></i><h4>Best Wedding Studio</h4><p>South India Frames, 2024</p></div>
+        <div class="award" data-aos="zoom-in" data-aos-delay="60"><i class="fa-solid fa-camera-retro"></i><h4>Cinematography Gold</h4><p>Indian Wedding Awards, 2023</p></div>
+        <div class="award" data-aos="zoom-in" data-aos-delay="120"><i class="fa-solid fa-star"></i><h4>Top 10 Photographers</h4><p>WedMeGood Featured, 2023</p></div>
+        <div class="award" data-aos="zoom-in" data-aos-delay="180"><i class="fa-solid fa-heart"></i><h4>Couples' Choice</h4><p>4.9★ across 300+ reviews</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section bg-alt" id="testimonials">
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Kind Words</span>
+        <h2 class="section-title">Loved by <em>couples</em></h2>
+      </div>
+      <div class="testi-wrap" data-aos="fade-up" id="testiWrap"></div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="section" id="team">
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Leadership</span>
+        <h2 class="section-title">Meet the <em>founder</em></h2>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section bg-alt" id="faq">
+    <span class="split-line"></span>
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Good to Know</span>
+        <h2 class="section-title">Frequently asked <em>questions</em></h2>
+      </div>
+      <div class="faq-wrap" id="faqWrap" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="section" id="blog">
+    <div class="container-x">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">Journal</span>
+        <h2 class="section-title">From the <em>blog</em></h2>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT + BOOKING ============ -->
+  <section class="section bg-alt" id="contact">
+    <div class="container-x">
+      <div class="section-head center" data-aos="fade-up">
+        <span class="eyebrow">Say Hello</span>
+        <h2 class="section-title">Let's tell your <em>story</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="row"><span class="ic"><i class="fa-solid fa-phone"></i></span><div><h4>Call / WhatsApp</h4><a href="tel:+918754045410">+91 87540 45410</a></div></div>
+          <div class="row"><span class="ic"><i class="fa-solid fa-envelope"></i></span><div><h4>Email</h4><a href="mailto:hello@manibarathiphotography.com">hello@manibarathiphotography.com</a></div></div>
+          <div class="row"><span class="ic"><i class="fa-solid fa-location-dot"></i></span><div><h4>Studio</h4><p>ECR Road, Chennai, Tamil Nadu 600041</p></div></div>
+          <div class="row"><span class="ic"><i class="fa-solid fa-clock"></i></span><div><h4>Studio Hours</h4><p>Mon – Sat · 10:00 AM – 8:00 PM</p></div></div>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/mani_bharathi_photography?igsh=amxqd3ZtMXVub3U2" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918754045410" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+918754045410" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div class="map-wrap">
+            <iframe title="ManiBarathi Photography studio location"
+              src="https://www.google.com/maps?q=Chennai,Tamil%20Nadu&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- BOOKING / INQUIRY FORM -->
+        <div class="form-card" id="booking" data-aos="fade-left">
+          <h3 style="font-size:1.5rem;margin-bottom:6px">Booking &amp; Inquiry</h3>
+          <p style="color:var(--text-dim);font-size:.9rem;margin-bottom:22px">Tell us about your day — we'll reply within 24 hours.</p>
+          <form id="inquiryForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input type="text" id="f-name" name="name" placeholder="Your full name" required>
+                <span class="err">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="f-mobile">Mobile Number</label>
+                <input type="tel" id="f-mobile" name="mobile" placeholder="+91 " required pattern="[0-9+\s\-]{8,15}">
+                <span class="err">Enter a valid mobile number.</span>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
+                <span class="err">Enter a valid email.</span>
+              </div>
+              <div class="field">
+                <label for="f-event">Event Type</label>
+                <select id="f-event" name="event" required>
+                  <option value="">Select event…</option>
+                  <option>Wedding Photography</option>
+                  <option>Wedding Videography / Film</option>
+                  <option>Pre-Wedding Shoot</option>
+                  <option>Engagement</option>
+                  <option>Mehendi / Haldi</option>
+                  <option>Birthday Event</option>
+                  <option>Baby Shoot</option>
+                  <option>Maternity Shoot</option>
+                  <option>Corporate Event</option>
+                  <option>Drone Photography</option>
+                  <option>Outdoor Photoshoot</option>
+                </select>
+                <span class="err">Please choose an event type.</span>
+              </div>
+              <div class="field">
+                <label for="f-date">Event Date</label>
+                <input type="date" id="f-date" name="date" required>
+                <span class="err">Please pick a date.</span>
+              </div>
+              <div class="field">
+                <label for="f-location">Location</label>
+                <input type="text" id="f-location" name="location" placeholder="City / venue">
+                <span class="err">Please enter a location.</span>
+              </div>
+              <div class="field full">
+                <label for="f-budget">Budget</label>
+                <select id="f-budget" name="budget">
+                  <option value="">Select budget range…</option>
+                  <option>Under ₹50,000</option>
+                  <option>₹50,000 – ₹1,00,000</option>
+                  <option>₹1,00,000 – ₹2,00,000</option>
+                  <option>Above ₹2,00,000</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" placeholder="Tell us a little about your event…"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn-x mt-3" style="width:100%;justify-content:center"><span>Send Inquiry</span> <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-note"><i class="fa-solid fa-lock"></i> This opens your email app with the details filled in — nothing is stored online.</p>
+            <p class="form-ok" id="formOk"><i class="fa-solid fa-circle-check"></i> Your email app should now be open with your inquiry ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container-x">
+      <div class="footer-grid">
+        <div>
+          <div class="brand mb-3">
+            <span class="brand-logo"><img src="assets/images/logo.png" onerror="this.onerror=null;this.src='assets/images/logo.jpg'" alt=""></span>
+            <span class="brand-txt"><span class="brand-name">Mani<b>Barathi</b></span><span class="brand-sub">Photography</span></span>
+          </div>
+          <p>Capturing moments, creating memories forever. Luxury wedding photography &amp; cinematic films across South India.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/mani_bharathi_photography?igsh=amxqd3ZtMXVub3U2" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918754045410" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+918754045410" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Wedding Photography</a></li>
+            <li><a href="#services">Cinematic Films</a></li>
+            <li><a href="#services">Pre-Wedding</a></li>
+            <li><a href="#services">Drone Coverage</a></li>
+            <li><a href="#services">Maternity &amp; Baby</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get in Touch</h5>
+          <ul>
+            <li><a href="tel:+918754045410"><i class="fa-solid fa-phone me-2"></i>+91 87540 45410</a></li>
+            <li><a href="https://www.instagram.com/mani_bharathi_photography?igsh=amxqd3ZtMXVub3U2" target="_blank" rel="noopener"><i class="fa-brands fa-instagram me-2"></i>@mani_bharathi_photography</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-location-dot me-2"></i>ECR Road, Chennai</a></li>
+            <li><a href="#booking"><i class="fa-solid fa-calendar-check me-2"></i>Book a date</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> ManiBarathi Photography. All rights reserved.</span>
+        <span>Made with <i class="fa-solid fa-heart" style="color:var(--henna)"></i> for beautiful weddings.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a class="wa-float" id="waFloat" href="https://wa.me/918754045410?text=Hi%20ManiBarathi%20Photography,%20I'd%20like%20to%20know%20more%20about%20your%20packages." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    <span class="lb-caption" id="lbCaption"></span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -48,7 +48,7 @@ the visitor's email app with **all the details pre-filled**, addressed to the
 studio. Change the studio email in `js/main.js`:
 
 ```js
-const STUDIO_EMAIL = "hello@manibarathiphotography.com";
+const STUDIO_EMAIL = "manibharathiphotography@gmail.com";
 ```
 
 ## Things to personalise

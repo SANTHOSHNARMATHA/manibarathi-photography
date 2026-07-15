@@ -305,7 +305,7 @@
   /* ---------------- FORM VALIDATION + MAILTO ---------------- */
   function initForm() {
     const form = $("#inquiryForm");
-    const STUDIO_EMAIL = "hello@manibarathiphotography.com";
+    const STUDIO_EMAIL = "manibharathiphotography@gmail.com";
     const required = ["f-name", "f-mobile", "f-email", "f-event", "f-date"];
 
     const validateField = (id) => {

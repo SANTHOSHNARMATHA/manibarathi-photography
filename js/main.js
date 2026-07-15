@@ -39,13 +39,6 @@
     { img: "cinematic-arch-2.jpg",     cat: "cinematic",  tag: "Cinematic",   title: "Golden Hour" }
   ];
 
-  const testimonials = [
-    { stars: 5, quote: "They didn't just photograph our wedding — they understood it. Every frame feels like the memory itself. The cinematic film made our parents cry.", name: "Priya & Karthik", meta: "Wedding · Chennai" },
-    { stars: 5, quote: "The mehendi photos are hung all over our home. So much detail, so much warmth. Booking ManiBarathi was the easiest decision we made.", name: "Divya & Arun", meta: "Mehendi & Wedding" },
-    { stars: 5, quote: "Professional, calm and genuinely kind on a chaotic day. The drone shots of our venue were breathtaking. Worth every rupee.", name: "Sneha & Vishnu", meta: "Full Wedding · ECR" },
-    { stars: 5, quote: "Our pre-wedding shoot felt like a movie set. They knew exactly how to make two shy people look natural. We keep re-watching the reel!", name: "Anjali & Ram", meta: "Pre-Wedding" }
-  ];
-
   const CONTACT = {
     phone:    "+91 87540 45410",
     phoneRaw: "918754045410",
@@ -55,20 +48,6 @@
 
   const team = [
     { img: "mani-barathi.jpeg", name: "Mani Barathi", role: "Founder & Lead Photographer" }
-  ];
-
-  const faqs = [
-    { q: "How far in advance should we book?", a: "For peak wedding season (November–February), we recommend booking 6–8 months ahead. For other dates, 2–3 months is usually comfortable. Popular weekends fill up fast." },
-    { q: "Do you travel outside Chennai?", a: "Absolutely. We cover weddings across Tamil Nadu and all of South India. Travel and stay for destination weddings are quoted separately and kept transparent." },
-    { q: "When will we receive our photos and film?", a: "Edited photos are delivered within 3–4 weeks, and cinematic films within 6–8 weeks. A same-day teaser reel is included in our Gold and Platinum packages." },
-    { q: "Can we customise a package?", a: "Yes — every package is a starting point. Add hours, extra events, albums or drone coverage. Just tell us what you need in the inquiry form." },
-    { q: "What is required to confirm a booking?", a: "A signed agreement and a 30% advance secures your date. The balance is split across the event and final delivery." }
-  ];
-
-  const posts = [
-    { img: "cinematic-arch.jpg",       date: "12 Jun 2026", title: "5 stunning locations for a Chennai pre-wedding shoot", excerpt: "From heritage mansions to the ECR coastline — our favourite backdrops for a cinematic couple story." },
-    { img: "mehendi-01.jpg",           date: "28 May 2026", title: "How to make your mehendi photos truly pop", excerpt: "Lighting, timing and the little details that turn henna snapshots into gallery-worthy frames." },
-    { img: "prewedding-bookshelf.jpg", date: "09 May 2026", title: "What to wear for an indoor couple shoot", excerpt: "A simple guide to colours and textures that photograph beautifully under soft indoor light." }
   ];
 
   /* ---------------- RENDER ---------------- */
@@ -90,17 +69,6 @@
         </figcaption>
       </figure>`).join("");
 
-    // Testimonials
-    $("#testiWrap").innerHTML =
-      testimonials.map((t, i) => `
-        <div class="testi ${i === 0 ? "active" : ""}">
-          <div class="stars">${"★".repeat(t.stars)}</div>
-          <q>${t.quote}</q>
-          <div class="who"><b>${t.name}</b><span>${t.meta}</span></div>
-        </div>`).join("") +
-      `<div class="testi-nav">${testimonials.map((_, i) =>
-        `<button class="testi-dot ${i === 0 ? "active" : ""}" data-i="${i}" aria-label="Testimonial ${i + 1}"></button>`).join("")}</div>`;
-
     // Team / Leadership
     const grid = $("#teamGrid");
     grid.classList.toggle("solo", team.length === 1);
@@ -120,24 +88,6 @@
           <a href="${CONTACT.ig}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @${CONTACT.igUser}</a>
         </div>
       </div>`).join("");
-
-    // FAQ
-    $("#faqWrap").innerHTML = faqs.map((f) => `
-      <div class="faq-item">
-        <button class="faq-q">${f.q}<i class="fa-solid fa-plus"></i></button>
-        <div class="faq-a"><p>${f.a}</p></div>
-      </div>`).join("");
-
-    // Blog
-    $("#blogGrid").innerHTML = posts.map((p, i) => `
-      <article class="post" data-aos="fade-up" data-aos-delay="${i * 70}">
-        <div class="ph"><img src="${IMG}${p.img}" alt="${p.title}" loading="lazy"></div>
-        <div class="body">
-          <span class="date">${p.date}</span>
-          <h3>${p.title}</h3><p>${p.excerpt}</p>
-          <a href="#" class="more">Read more <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>`).join("");
   }
 
   /* ---------------- LOADER ---------------- */
@@ -193,11 +143,14 @@
   function initFilter() {
     const btns = $$(".filter-btn");
     const items = $$(".gallery-item");
+    const gallery = $("#gallery");
     btns.forEach(btn => btn.addEventListener("click", () => {
       btns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       const f = btn.dataset.filter;
       items.forEach(it => it.classList.toggle("hide", !(f === "all" || it.dataset.cat === f)));
+      // On mobile the gallery is a horizontal carousel — restart from the first photo
+      gallery.scrollTo({ left: 0, behavior: "smooth" });
     }));
   }
 
@@ -233,21 +186,6 @@
     });
   }
 
-  /* ---------------- TESTIMONIAL CAROUSEL ---------------- */
-  function initTestimonials() {
-    const slides = $$(".testi"), dots = $$(".testi-dot");
-    if (!slides.length) return;
-    let i = 0, timer;
-    const go = (n) => {
-      i = (n + slides.length) % slides.length;
-      slides.forEach((s, k) => s.classList.toggle("active", k === i));
-      dots.forEach((d, k) => d.classList.toggle("active", k === i));
-    };
-    const auto = () => { timer = setInterval(() => go(i + 1), 5500); };
-    dots.forEach(d => d.addEventListener("click", () => { go(+d.dataset.i); clearInterval(timer); auto(); }));
-    auto();
-  }
-
   /* ---------------- COUNTERS ---------------- */
   function initCounters() {
     const nums = $$(".num[data-count]");
@@ -278,18 +216,6 @@
     };
     range.addEventListener("input", (e) => upd(e.target.value));
     upd(50);
-  }
-
-  /* ---------------- FAQ ---------------- */
-  function initFaq() {
-    $$(".faq-item").forEach(item => {
-      const q = $(".faq-q", item), a = $(".faq-a", item);
-      q.addEventListener("click", () => {
-        const open = item.classList.contains("open");
-        $$(".faq-item").forEach(o => { o.classList.remove("open"); $(".faq-a", o).style.maxHeight = null; });
-        if (!open) { item.classList.add("open"); a.style.maxHeight = a.scrollHeight + "px"; }
-      });
-    });
   }
 
   /* ---------------- PACKAGE -> FORM ---------------- */
@@ -371,6 +297,73 @@ Thank you!`;
     });
   }
 
+  /* ---------------- MOBILE CAROUSELS (auto-scroll every 1s) ----------------
+     Only active on mobile widths. Services and Portfolio become horizontal
+     carousels that advance one card per second and loop back to the start.
+     Auto-advance pauses briefly while the visitor is swiping. */
+  function initMobileCarousels() {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const STEP_MS = 1000;
+
+    const makeAuto = (container, itemSelector) => {
+      let timer = null, paused = false, resumeT = null;
+
+      const items = () => $$(itemSelector, container).filter(el => !el.classList.contains("hide"));
+
+      const currentIndex = (list) => {
+        const cLeft = container.getBoundingClientRect().left;
+        let best = 0, bestDist = Infinity;
+        list.forEach((it, k) => {
+          const d = Math.abs(it.getBoundingClientRect().left - cLeft);
+          if (d < bestDist) { bestDist = d; best = k; }
+        });
+        return best;
+      };
+
+      const step = () => {
+        if (paused) return;
+        const list = items();
+        if (list.length < 2) return;
+        const maxScroll = container.scrollWidth - container.clientWidth - 4;
+        const next = container.scrollLeft >= maxScroll
+          ? 0
+          : Math.min(currentIndex(list) + 1, list.length - 1);
+        const delta = list[next].getBoundingClientRect().left - container.getBoundingClientRect().left;
+        container.scrollTo({ left: container.scrollLeft + delta, behavior: "smooth" });
+      };
+
+      const pause = () => {
+        paused = true;
+        clearTimeout(resumeT);
+        resumeT = setTimeout(() => { paused = false; }, 2500);
+      };
+
+      const start = () => {
+        if (timer) return;
+        container.addEventListener("pointerdown", pause);
+        container.addEventListener("touchstart", pause, { passive: true });
+        container.addEventListener("wheel", pause, { passive: true });
+        timer = setInterval(step, STEP_MS);
+      };
+      const stop = () => {
+        clearInterval(timer); timer = null;
+        clearTimeout(resumeT); paused = false;
+        container.removeEventListener("pointerdown", pause);
+        container.removeEventListener("touchstart", pause);
+        container.removeEventListener("wheel", pause);
+      };
+      return { start, stop };
+    };
+
+    const controllers = [];
+    const svc = $("#svcGrid");  if (svc) controllers.push(makeAuto(svc, ".svc-card"));
+    const gal = $("#gallery");  if (gal) controllers.push(makeAuto(gal, ".gallery-item"));
+
+    const sync = () => controllers.forEach(c => mq.matches ? c.start() : c.stop());
+    mq.addEventListener("change", sync);
+    sync();
+  }
+
   /* ---------------- INIT ---------------- */
   document.addEventListener("DOMContentLoaded", () => {
     render();
@@ -380,13 +373,12 @@ Thank you!`;
     initTheme();
     initFilter();
     initLightbox();
-    initTestimonials();
     initCounters();
     initBeforeAfter();
-    initFaq();
     initPackageLinks();
     initForm();
     initFloating();
+    initMobileCarousels();
 
     $("#year").textContent = new Date().getFullYear();
 

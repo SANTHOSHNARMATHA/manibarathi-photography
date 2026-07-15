@@ -667,6 +667,8 @@ section[id], #booking { scroll-margin-top: 88px; }
 .footer-social a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--hairline); display: grid; place-items: center; color: var(--text-dim); transition: all .3s; }
 .footer-social a:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--line); margin-top: 50px; padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--text-dimmer); font-size: .82rem; }
+.footer-bottom .credit-link { color: var(--gold-soft); font-weight: 600; transition: color .25s; }
+.footer-bottom .credit-link:hover { color: var(--gold); text-decoration: underline; }
 
 /* =====================================================================
    Floating: WhatsApp + Back to top

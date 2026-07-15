@@ -52,7 +52,11 @@
 
 /* ---------- Base ---------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;        /* stop sideways scroll on mobile (Vivo/MIUI/etc.) */
+  width: 100%;
+}
 body {
   margin: 0;
   background: var(--bg);
@@ -62,6 +66,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   transition: background .5s var(--ease), color .5s var(--ease);
 }
 img { max-width: 100%; display: block; }
@@ -84,9 +90,12 @@ section[id], #booking { scroll-margin-top: 88px; }
   display: inline-flex;
   align-items: center;
   gap: .8em;
+  flex-wrap: wrap;          /* wrap instead of overflowing on small screens */
+  max-width: 100%;
 }
 .eyebrow::before {
   content: ""; width: 34px; height: 1px; background: var(--gold); opacity: .7;
+  flex-shrink: 0;
 }
 .section-head { max-width: 720px; margin-bottom: clamp(40px, 6vw, 70px); }
 .section-head.center { margin-inline: auto; text-align: center; }
@@ -309,6 +318,7 @@ section[id], #booking { scroll-margin-top: 88px; }
 .hero-title {
   font-size: clamp(2.8rem, 8vw, 5.6rem);
   margin: .28em 0 .18em; letter-spacing: -.02em;
+  overflow-wrap: break-word;
 }
 .hero-title em { font-style: italic; color: var(--gold-soft); }
 .hero-tag { font-size: 1.15rem; color: var(--cream-dim); max-width: 460px; }
@@ -673,6 +683,17 @@ section[id], #booking { scroll-margin-top: 88px; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
   .hero-cta .btn-x { width: 100%; justify-content: center; }
   .lb-prev { left: 10px; } .lb-next { right: 10px; }
+  .hero-title { font-size: clamp(2.3rem, 10vw, 3.4rem); }
+  .hero-tag { font-size: 1.05rem; }
+  .btn-x { padding: 14px 22px; }   /* keep buttons from forcing overflow */
+}
+
+/* Smallest phones (older Vivo / compact devices ~360px and below) */
+@media (max-width: 380px) {
+  .container-x { width: 90%; }
+  .hero-title { font-size: clamp(2rem, 9.5vw, 2.9rem); }
+  .brand-sub { letter-spacing: .22em; }   /* narrower so brand never clips */
+  .eyebrow { letter-spacing: .26em; }
 }
 
 /* Accessibility: reduced motion */
